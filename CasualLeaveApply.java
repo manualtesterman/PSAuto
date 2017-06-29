@@ -111,6 +111,7 @@ public class CasualLeaveApply extends TestBase{
 			driver.get(internet_URL);		    
 			pagerefresh();			
 			util.waitForPageToLoad();
+			pagerefresh();
 			driver.manage().timeouts().implicitlyWait(1200, TimeUnit.SECONDS);
 			
 			/**
@@ -136,6 +137,7 @@ public class CasualLeaveApply extends TestBase{
 				
 				WebElement employeedropdown = driver.findElement(By.xpath(OR.getProperty("Employeedropdown")));
 				Select empdropdown = new Select(employeedropdown);
+				empdropdown.selectByValue("184");
 				empdropdown.selectByValue("184");
 				driver.findElement(By.xpath(OR.getProperty("Reportfromdate"))).click();
 				driver.findElement(By.xpath(OR.getProperty("Reportfromdate"))).clear();
